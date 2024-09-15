@@ -70,6 +70,11 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // dateSearch
-  const dateSearchContainer = createDateSearch(selectedDate, updateCalendar);
+  const dateSearchContainer = createDateSearch(
+    selectedDate,
+    updateCalendar,
+    updateTodoList,
+    todos
+  );
   calendarElement.insertAdjacentElement("afterend", dateSearchContainer);
 });

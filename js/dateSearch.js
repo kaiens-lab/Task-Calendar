@@ -1,7 +1,12 @@
 /*------------------------dateSearch------------------------*/
 // Function: Generate Date Selector.
 
-export function createDateSearch(selectedDate, updateCalendar) {
+export function createDateSearch(
+  selectedDate,
+  updateCalendar,
+  updateTodoList,
+  todos
+) {
   const today = new Date();
   const currentYear = today.getFullYear();
   const currentMonthIndex = today.getMonth() + 1; // Months start at 0, so add 1 to display the correct month.
@@ -71,7 +76,6 @@ export function createDateSearch(selectedDate, updateCalendar) {
     const selectedMonth = parseInt(monthSelect.value);
     const selectedDay = parseInt(daySelect.value);
 
-    // 更新 selectedDate 和 currentMonth
     const selectedDateValue = new Date(
       selectedYear,
       selectedMonth - 1,
@@ -79,11 +83,10 @@ export function createDateSearch(selectedDate, updateCalendar) {
     );
     selectedDate.date = selectedDateValue;
 
-    // 更新 currentMonth 為選擇的月份，使日曆跳轉到正確的月份
     const currentMonth = new Date(selectedYear, selectedMonth - 1);
 
-    // 調用 updateCalendar 並將 currentMonth 傳入
     updateCalendar(currentMonth);
+    updateTodoList();
   });
 
   //today Button
@@ -99,6 +102,7 @@ export function createDateSearch(selectedDate, updateCalendar) {
     daySelect.value = today.getDate();
     selectedDate.date = today;
     updateCalendar(today);
+    updateTodoList();
   });
 
   dateSearchContainer.appendChild(yearSelect);
