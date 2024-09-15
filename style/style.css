@@ -422,8 +422,81 @@ body {
 }
 
 @media screen and (max-width: 870px) {
+  .container {
+    padding: 20px;
+  }
   .main-content {
     display: flex;
     flex-direction: column;
+  }
+
+  .calendar-section {
+    width: 95%;
+    margin-left: 10px;
+  }
+
+  .todo-list {
+    width: 95%;
+
+    padding: 20px 10px 20px 15px;
+  }
+
+  #new-todo-input {
+    width: 50%;
+  }
+
+  .add-todo-btn {
+    width: 100px;
+  }
+
+  .edit-input {
+    max-width: 300px;
+  }
+
+  .date-search-container {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 595px) {
+  .dates-container div {
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .date-search-container select {
+    padding: 8px;
+    border-radius: 5px;
+  }
+
+  .dates-container div {
+    height: 40px;
+  }
+  .go-button,
+  .today-button {
+    padding: 8px 10px;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 455px) {
+  #new-todo-input {
+    width: 80%;
+  }
+
+  .add-todo-btn {
+    width: 85%;
+    margin-left: 2px;
+  }
+
+  .dates-container div {
+    height: 30px;
+  }
+
+  .todo-dot {
+    top: 8px;
+    width: 6px;
+    height: 6px;
   }
 }
