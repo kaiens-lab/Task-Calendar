@@ -26,17 +26,20 @@ export function renderTodoList(
     checkbox.type = "checkbox";
     checkbox.checked = todo.completed;
     checkbox.addEventListener("change", () => {
-      todo.completed = checkbox.checked;
-      saveTodos();
-      renderTodoList(
-        dateDisplay,
-        todoItemsElement,
-        selectedDate,
-        todos,
-        saveTodos,
-        renderCalendar
-      );
-      renderCalendar();
+      todoItem.classList.add("slide-right-disappear");
+      todoItem.addEventListener("animationend", () => {
+        todo.completed = checkbox.checked;
+        saveTodos();
+        renderTodoList(
+          dateDisplay,
+          todoItemsElement,
+          selectedDate,
+          todos,
+          saveTodos,
+          renderCalendar
+        );
+        renderCalendar();
+      });
     });
 
     //display the todo text.
@@ -78,17 +81,20 @@ export function renderTodoList(
     deleteButton.className = "delete-btn";
     deleteButton.textContent = "Delete";
     deleteButton.addEventListener("click", () => {
-      deleteTodo(todos, selectedDate, index);
-      saveTodos();
-      renderTodoList(
-        dateDisplay,
-        todoItemsElement,
-        selectedDate,
-        todos,
-        saveTodos,
-        renderCalendar
-      );
-      renderCalendar();
+      todoItem.classList.add("slide-right-disappear");
+      todoItem.addEventListener("animationend", () => {
+        deleteTodo(todos, selectedDate, index);
+        saveTodos();
+        renderTodoList(
+          dateDisplay,
+          todoItemsElement,
+          selectedDate,
+          todos,
+          saveTodos,
+          renderCalendar
+        );
+        renderCalendar();
+      });
     });
 
     todoItem.appendChild(checkbox);
