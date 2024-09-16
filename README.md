@@ -9,7 +9,7 @@ A web application that combines a calendar and a to-do list, with enhanced date 
   - [目錄 / Table of Contents](#目錄--table-of-contents)
   - [功能特點 / Features](#功能特點--features)
     - [🔍 概覽 Overview](#-概覽-overview)
-    - [Links](#links)
+    - [🔗 Links](#-links)
     - [🔍 技術概覽 / Technical Overview](#-技術概覽--technical-overview)
     - [📝 待辦事項管理 To-Do Management](#-待辦事項管理-to-do-management)
     - [📅 日期選擇與操作 Date Selection \& Navigation](#-日期選擇與操作-date-selection--navigation)
@@ -24,7 +24,7 @@ A web application that combines a calendar and a to-do list, with enhanced date 
 - 此項目支援 RWD 技術，可在桌面和手機設備上運行，隨時隨地管理代辦事項。  
    This project is optimized with RWD (Responsive Web Design) technology, making it usable on both desktop and mobile devices for task management anytime, anywhere.
 
-### Links
+### 🔗 Links
 
 - Live Site URL: [Task Calendar](https://kaiens-lab.github.io/Task-Calendar/)
 
@@ -69,5 +69,3 @@ A web application that combines a calendar and a to-do list, with enhanced date 
 
 - 使用瀏覽器的 localStorage 來保存待辦事項，確保資料在頁面刷新後不會丟失。  
    Uses browser localStorage to save tasks, ensuring data persists after page refresh.
-
----
