@@ -188,9 +188,7 @@
 
 @media screen and (max-width: 1130px) {
   .todo-list {
-    width: 80%;
-
-    padding: 20px 10px 20px 15px;
+    width: 100%;
   }
 
   .todo-list .to-do-title {
@@ -202,7 +200,7 @@
   }
 
   #new-todo-input {
-    width: 50%;
+    width: 70%;
   }
 
   .add-todo-btn {
@@ -213,20 +211,17 @@
     max-width: 300px;
   }
 }
-@media screen and (max-width: 520px) {
-  .go-button,
-  .today-button {
-    padding: 8px 10px;
-    border-radius: 5px;
-  }
-}
 
 @media screen and (max-width: 585px) {
+  .todo-list {
+    width: 100%;
+  }
+
   #new-todo-input {
-    width: 250px;
+    width: 100%;
   }
   .add-todo-btn {
-    width: 250px;
+    width: 100%;
   }
 }
 
@@ -234,6 +229,14 @@
   .go-button,
   .today-button {
     padding: 5px 8px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .go-button,
+  .today-button {
+    padding: 8px 10px;
+    border-radius: 5px;
   }
 }
 
