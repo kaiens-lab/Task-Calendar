@@ -1,0 +1,49 @@
+@import "./variables";
+
+/* Container */
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  background-color: var(--dark-gray);
+  padding: 30px 10px 30px 30px;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between; /*Display the calendar and to-do list side by side.*/
+}
+
+.calendar-section {
+  width: 60%;
+}
+
+/* RWD */
+@media screen and (max-width: 1200px) {
+  .container {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 1130px) {
+  .container {
+    padding: 20px;
+  }
+  .main-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .calendar-section {
+    width: 95%;
+    margin-left: 10px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    padding: 20px 10px;
+  }
+}

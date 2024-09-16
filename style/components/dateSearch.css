@@ -1,0 +1,94 @@
+@import "./variables";
+
+/* DateSearch Container */
+.date-search-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: var(--search-bar-bg);
+  border-radius: 15px;
+  width: 100%;
+  max-width: 650px;
+  gap: 10px;
+}
+
+.date-search-container select {
+  background-color: var(--dropdown-bg);
+  color: var(--light-gray);
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+}
+
+.go-button {
+  background-color: var(--primary-yellow);
+  border: none;
+  border-radius: 10px;
+  color: var(--search-bar-bg);
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.go-button:hover {
+  background-color: var(--light-gray);
+}
+
+.today-button {
+  background-color: var(--primary-yellow);
+  border: none;
+  border-radius: 10px;
+  color: var(--search-bar-bg);
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.today-button:hover {
+  background-color: var(--light-gray);
+}
+
+.date-search-container select:hover {
+  background-color: var(--light-gray);
+  color: var(--dark-gray);
+}
+
+/* RWD */
+@media screen and (max-width: 980px) {
+  .date-search-container {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .date-search-container select {
+    padding: 8px;
+    border-radius: 5px;
+  }
+
+  .go-button,
+  .today-button {
+    padding: 8px 10px;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (max-width: 455px) {
+  .date-search-container select {
+    padding: 8px;
+    margin-left: -10px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .date-search-container select {
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+}

@@ -1,0 +1,148 @@
+@import "./variables";
+
+/* Calendar Nav */
+.calendar-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.nav-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--soft-gray);
+}
+
+.nav-btn:hover {
+  color: var(--primary-yellow);
+}
+
+#current-month {
+  font-size: 1.2rem;
+  color: var(--soft-gray);
+}
+
+/* Week-Header */
+.week-header {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-weight: bold;
+  padding: 5px 0;
+}
+
+/* Calendar-Content */
+.calendar {
+  margin-bottom: 20px;
+  color: var(--soft-gray);
+}
+
+.calendar-days-row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar div,
+.dates-container div {
+  padding: 10px 0;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.other-month {
+  color: var(--warm-gray);
+}
+
+.calendar .selected {
+  background-color: var(--primary-yellow);
+  color: var(--dark-gray);
+}
+
+/* Calendar-Container */
+.dates-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.dates-container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 70px;
+  display: flex;
+  border-radius: 10px;
+  border: 1px solid var(--warm-gray);
+}
+
+.dates-container div:hover {
+  background-color: var(--light-gray);
+  color: var(--dark-gray);
+}
+
+.dates-container div:hover .todo-dot {
+  background-color: var(--dark-gray);
+}
+
+.dates-container div:hover .todo-dot.completed {
+  background-color: var(--medium-gray);
+}
+
+/* Todo-dot */
+.todo-dot {
+  position: absolute;
+  top: 10px;
+  display: block;
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary-yellow);
+  border-radius: 50%;
+  margin-bottom: -5px;
+  z-index: 10;
+  position: relative;
+}
+
+.todo-dot:hover {
+  background-color: var(--dark-gray);
+}
+
+.todo-dot.completed {
+  background-color: var(--light-gray);
+}
+
+.calendar .selected .todo-dot {
+  background-color: var(--dark-gray);
+}
+
+/* RWD */
+@media screen and (max-width: 980px) {
+  .date-search-container {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .dates-container div {
+    height: 60px;
+  }
+
+  .todo-dot {
+    top: 6px;
+  }
+}
+
+@media screen and (max-width: 455px) {
+  .dates-container div {
+    height: 50px;
+  }
+  .todo-dot {
+    width: 5px;
+    height: 5px;
+    top: 4px;
+  }
+}
