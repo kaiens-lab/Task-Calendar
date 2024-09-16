@@ -2,7 +2,7 @@
 
 /* Todo List */
 .todo-list {
-  width: 30%;
+  width: 35%;
   padding-top: 20px;
   border-radius: 8px;
   padding: 20px;
@@ -47,8 +47,7 @@
 
 #new-todo-input {
   flex-grow: 1;
-  min-width: 200px;
-  max-width: 500px;
+  width: 250px;
   padding: 10px;
   margin-right: 5px;
   border: 1px solid #202020;
@@ -181,7 +180,7 @@
 /* RWD */
 @media screen and (max-width: 1318px) {
   .add-todo-btn {
-    width: 195px;
+    width: 250px;
     margin-top: 10px;
     margin-left: 2px;
   }
