@@ -1,3 +1,4 @@
+import { addTodoMarker } from "../todoUtils.js";
 /*------------------------PrevMonthDates------------------------*/
 //Function: Show Last Days of Previous Month.
 
@@ -39,16 +40,7 @@ export function renderPrevMonthDates(
 
       // Check if there are todos for the date & mark if all are completed.
       // Add To-Do Marker.
-      const dateKey = prevDate.toDateString();
-      if (todos[dateKey] && todos[dateKey].length > 0) {
-        const allCompleted = todos[dateKey].every((todo) => todo.completed);
-        const dotElement = document.createElement("span");
-        dotElement.classList.add("todo-dot");
-        if (allCompleted) {
-          dotElement.classList.add("completed");
-        }
-        dateElement.appendChild(dotElement);
-      }
+      addTodoMarker(prevDate, todos, dateElement);
 
       datesContainer.appendChild(dateElement);
     }

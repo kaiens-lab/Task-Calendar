@@ -1,3 +1,4 @@
+import { addTodoMarker } from "../todoUtils.js";
 /*------------------------NextMonthDates------------------------*/
 //Function: Show First Days of Next Month.
 
@@ -35,16 +36,7 @@ export function renderNextMonthDates(
 
     // Check if there are todos for the date & mark if all are completed.
     // Add To-Do Marker.
-    const dateKey = nextDate.toDateString();
-    if (todos[dateKey] && todos[dateKey].length > 0) {
-      const allCompleted = todos[dateKey].every((todo) => todo.completed);
-      const dotElement = document.createElement("span");
-      dotElement.classList.add("todo-dot");
-      if (allCompleted) {
-        dotElement.classList.add("completed");
-      }
-      dateElement.appendChild(dotElement);
-    }
+    addTodoMarker(nextDate, todos, dateElement);
 
     datesContainer.appendChild(dateElement);
   }
