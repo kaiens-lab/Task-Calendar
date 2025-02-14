@@ -1,10 +1,20 @@
-// Save todo to localStorage
+// Save todos to localStorage
 export function saveTodos(todos) {
   localStorage.setItem("todos", JSON.stringify(todos));
 }
 
-// Load todo from localStorage
-// If no data is found, it returns an empty object `{}` by default.
+// Load todos from localStorage
 export function loadTodos() {
-  return JSON.parse(localStorage.getItem("todos")) || {};
+  const storedTodos = localStorage.getItem("todos");
+  if (!storedTodos) {
+    console.log("No todos found in localStorage. Returning empty object.");
+    return {};
+  }
+
+  try {
+    return JSON.parse(storedTodos);
+  } catch (error) {
+    console.error("Error parsing todos from localStorage:", error);
+    return {};
+  }
 }
